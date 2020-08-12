@@ -1,0 +1,237 @@
+<!Docktype html>
+<html>
+<body>
+<link rel="stylesheet"
+href="Junior-news.css">
+
+<div class="navbar" id="navbar"  >
+ 
+  <a><img class="logo" src="JN Name.jpg"></a>
+  <div class="topnav-right">
+    <a href="HowtocodeHTML.html">Home</a>
+    <a href="HowtocodeHTML.html">Daily News</a>
+    <a href="Howtocodecss.html">Newspapers</a>
+    <a href="JN-Coming-Soon">Worksheets</a>
+    <a href="HowtocodeJavascript.html">Games</a>
+    <a href="howtocodeabout.html">About</a>
+    <a href="howtocodecontact.html">Contact</a>
+  </div>
+</div>
+
+
+<img src="DailyNews.png" >
+<br>
+<section><h1 style="text-align: center; color: blue; align-content: center;">Top Stories</h1>
+<br>
+
+  <div class="centered-home"><section style="background-color: gray; border-radius: 20px;"></section></div>
+  <img src="l2.png" >
+  <h2>Junior News<br>is back</h2>
+</section>
+</section>
+<div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=GBP" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'blue',
+          layout: 'vertical',
+          label: 'checkout',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '10'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+  </head>
+
+  <body>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_SB_CLIENT_ID"> // Replace YOUR_SB_CLIENT_ID with your sandbox client ID
+    </script>
+
+    <div id="paypal-button-container"></div>
+
+    <!-- Add the checkout buttons, set up the order and approve the order -->
+    <script>
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '0.01'
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Transaction completed by ' + details.payer.name.given_name);
+          });
+        }
+      }).render('#paypal-button-container'); // Display payment options on your web page
+    </script>
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+<style>
+
+.centered-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+}
+
+.Section1 {
+  color: gray;
+  display: block;
+}
+body {
+   margin: 0px;
+    display: block;
+}
+
+.html {
+  margin: 0px;
+}
+ 
+
+
+  .navbar {
+  background-color: white;
+  overflow: hidden;
+}
+
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Top right text */
+.middleright {
+  position: absolute;
+  top: 325px;
+  right:550px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+
+.navbar a {
+float: left;
+color: #4472C4;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 20px;
+}
+
+
+.navbar a:hover {
+background-color: #ddd;
+border-bottom: 1px solid ;
+} 
+
+.Junior1 {
+ color: #DC2C2C;
+}
+
+.navbar a.active {
+background-color: #4CAF50;
+color:black;
+
+}
+
+.logo {
+  height: 23px;
+}
+
+.topnav-right {
+float: right;
+}
+
+.centered-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: #DC2C2C;
+}
+
+.SubmitEmail {
+float: right;
+}
+
+.Person1 {
+  float: left;
+  width: 500px;
+  height: 500px;
+}
+</style>
+   
+</body>
+</html>
